@@ -1,0 +1,9 @@
+<div>
+  <button (click)="addHeroes()">Charger les héros</button>
+</div>
+<div class="flex flex-wrap gap-2">
+    <a *ngFor="let hero of heroes" [routerLink]="['/hero', hero.id]">
+      <img [src]="hero.images.sm" [alt]="hero.name" class="rounded-3xl">
+      <h2 class="flex justify-center text-2xl text-red-900 font-bold">{{ hero.name }}</h2>
+    </a>
+</div>
